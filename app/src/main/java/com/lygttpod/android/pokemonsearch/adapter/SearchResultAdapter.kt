@@ -9,7 +9,6 @@ import com.lygttpod.android.pokemonsearch.PokemonQuery
 import com.lygttpod.android.pokemonsearch.R
 import com.lygttpod.android.pokemonsearch.databinding.ItemSearchResultBinding
 import com.lygttpod.android.pokemonsearch.utils.ColorUtils
-
 /**
  * <pre>
  *      author  : Allen
@@ -38,7 +37,7 @@ class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.SearchResul
 
     fun setData(datas: List<PokemonQuery.Pokemon_v2_pokemonspecy>?) {
         this.list = datas ?: mutableListOf()
-        notifyItemRangeChanged(0, itemCount)
+        notifyDataSetChanged()
     }
 
     inner class SearchResultViewHolder(view: View) : RecyclerView.ViewHolder(view) {
